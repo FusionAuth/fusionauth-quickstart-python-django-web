@@ -11,9 +11,9 @@
         <img src="https://fusionauth.io/cdn/samplethemes/changebank/changebank.svg" />
         <div class="h-row">
           <p class="header-email">{{ email }}</p>
-          <form id="logoutForm" class="button-lg"  action="{% url 'oidc_logout' %}" method="post">
+          <form action="{% url 'oidc_logout' %}" method="post">
             {% csrf_token %}
-            <a class="button-lg" href="#" onclick="document.getElementById('logoutForm').submit();">Logout</a>
+            <input type="submit" value="Logout" class="button-lg">
           </form>
         </div>
       </div>
