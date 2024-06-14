@@ -14,6 +14,7 @@ The `/complete-application` directory contains a fully working version of the ap
 
 * Docker, for running FusionAuth.
 * Python 3.8 or later, for running the Changebank Python application.
+* [mozilla-django-oidc library](https://mozilla-django-oidc.readthedocs.io/en/stable/index.html)
 
 ## Running FusionAuth
 
