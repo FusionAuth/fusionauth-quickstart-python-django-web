@@ -14,6 +14,10 @@ def account(request):
         return redirect('oidc_authentication_init')
     return render(request, 'account.html', {'email': request.user.email})
 
+def django_logout(request):
+    #this is where you would write server side code after logging out of FusionAuth if your application required it
+    return 
+
 def logout(request):
     django_logout(request)
     return redirect('app')

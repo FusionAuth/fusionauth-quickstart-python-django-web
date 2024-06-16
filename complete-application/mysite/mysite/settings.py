@@ -33,7 +33,8 @@ OIDC_RP_SCOPES = "openid profile email"
 OIDC_RP_SIGN_ALGO = "RS256"
 OIDC_OP_JWKS_ENDPOINT = os.environ['ISSUER'] + "/.well-known/jwks.json"
 LOGIN_REDIRECT_URL = "http://localhost:8000/app/account/"
-LOGOUT_REDIRECT_URL = "http://localhost:8000/app/"
+#LOGOUT_REDIRECT_URL = "http://localhost:8000/app/"
+LOGOUT_REDIRECT_URL = os.environ['ISSUER'] + "/oauth2/logout?client_id=" + OIDC_RP_CLIENT_ID
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
