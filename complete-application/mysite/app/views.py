@@ -14,12 +14,12 @@ def account(request):
         return redirect('oidc_authentication_init')
     return render(request, 'account.html', {'email': request.user.email})
 
-def django_logout(request):
-    #this is where you would write server side code after logging out of FusionAuth if your application required it
-    return 
-
 def logout(request):
-    django_logout(request)
+    # https://mozilla-django-oidc.readthedocs.io/en/stable/installation.html
+    # When a user logs out, by default, mozilla-django-oidc will end the current Django session. 
+    # However, the user may still have an active session with the OpenID Connect provider. In this case
+    # the user has been directed back to the FusionAuth server to end the session there. FusionAuth will redirect
+    # back here. This is where servers side cleanup will happen, if needed.
     return redirect('app')
 
 def change(request):
