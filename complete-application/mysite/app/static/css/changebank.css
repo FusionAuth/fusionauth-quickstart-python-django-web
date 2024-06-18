@@ -95,6 +95,22 @@ body {
   text-decoration-line: none;
 }
 
+.button-logout {
+  background-color: #096324;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration-line: none;
+  padding: 10px 20px !important;
+  display: block !important;
+  width: 130px !important;
+  margin: 10px auto 0px auto;
+  border: none;
+}
+
+
 .column-container {
   display: flex;
   flex-direction: row;
