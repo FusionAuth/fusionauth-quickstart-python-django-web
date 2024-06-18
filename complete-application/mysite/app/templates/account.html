@@ -13,7 +13,7 @@
           <p class="header-email">{{ email }}</p>
           <form action="{% url 'oidc_logout' %}" method="post">
             {% csrf_token %}
-            <input type="submit" value="Logout" class="button-lg">
+            <input type="submit" value="Logout" class="button-logout">
           </form>
         </div>
       </div>
