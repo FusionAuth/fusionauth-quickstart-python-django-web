@@ -21,13 +21,13 @@
     {
       "method": "POST",
       "url": "/api/key/generate/#{asymmetricKeyId}",
-      "tenantId": "#{defaultTenantId}",
       "body": {
         "key": {
           "algorithm": "RS256",
           "name": "For exampleapp",
           "length": 2048
-        }
+        },
+        "tenantId": "#{defaultTenantId}"
       }
     },
     {
